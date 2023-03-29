@@ -1,0 +1,70 @@
+﻿<Window x:Class="itog.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:itog"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6" RenderTransformOrigin="0.489,0.556" Background="#FF6FFF00">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="335*"/>
+        </Grid.RowDefinitions>
+        <TabControl Margin="-10,0,0,0">
+            <TabItem Header="Животные" Background="{x:Null}" FontFamily="Ink Free" Height="54" Width="140">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="54*"/>
+                        <ColumnDefinition Width="382*"/>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="gr1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,1,0,-378" Grid.ColumnSpan="4"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Аттракционы" Background="{x:Null}" FontFamily="Ink Free">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="184*"/>
+                        <ColumnDefinition Width="375*"/>
+                        <ColumnDefinition Width="251*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="gr2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,1,0,-381" Grid.ColumnSpan="3"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Покупки" Background="{x:Null}" FontFamily="Ink Free">
+                <Grid Background="#FFF0231D">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="435*"/>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="gr3" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,1,0,-378" Grid.ColumnSpan="3"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Зрители" Background="{x:Null}" FontFamily="Ink Free">
+                <Grid Background="#FFF0231D">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="435*"/>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="gr4" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,1,0,-378" Grid.ColumnSpan="3"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Билеты" Background="{x:Null}" FontFamily="Ink Free">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="435*"/>
+                        <ColumnDefinition Width="51*"/>
+                        <ColumnDefinition Width="314*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="gr5" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,1,0,-378" Grid.ColumnSpan="3"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
